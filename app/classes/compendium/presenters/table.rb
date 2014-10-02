@@ -66,7 +66,7 @@ module Compendium::Presenters
       if @settings.formatters[k]
         @settings.formatters[k].call(v)
       else
-        if v.numeric?
+        if v.numeric? && !v.is_a?(String)
           if v.zero? && @settings.display_zero_as?
             @settings.display_zero_as
           else
