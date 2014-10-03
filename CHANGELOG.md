@@ -6,12 +6,25 @@
 * Add default orders for count and sum queries
 * Fix redefining a query so that it actually overrides the previous query instead of creating a new one with the same name
 
+## 1.1.4
+* Changes the table presenter to treat numeric strings as strings and
+  not numerics.
+
 ## 1.1.3
 * Add `SumQuery` query type
 * Fix option tooltip covering input elements in IE [rvracaric]
 * Allow custom param validations to be specified
 * Fix filters being overridden by subclassed queries
 
+## 1.1.2
+* Allow direct access to a chart object without having to render it (useful if the provider allows chart settings to be updated after initialization)
+* Delegate missing methods from ChartProvider classes to the chart
+
+## 1.1.1
+* Fix crash regressions in Rails 3
+* Added `CountQuery` query type which calls count on the result of the given block (for instance a query which is
+  grouped by day and then counted)
+* Added `ScalarParam` param type for collecting arbitrary data
 ## 1.1.2
 * Allow direct access to a chart object without having to render it (useful if the provider allows chart settings to be updated after initialization)
 * Delegate missing methods from ChartProvider classes to the chart
