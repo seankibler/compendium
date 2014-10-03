@@ -1,5 +1,12 @@
 # Change Log
 
+## 1.1.4
+* Changes the table presenter to treat numeric strings as strings and
+  not numeric.
+
+## 1.1.3
+* Added SumQuery type which calls sum on the result of the given block
+
 ## 1.1.2
 * Allow direct access to a chart object without having to render it (useful if the provider allows chart settings to be updated after initialization)
 * Delegate missing methods from ChartProvider classes to the chart
